@@ -56,7 +56,7 @@ int main() {
   BB->getInstList().push_back(ReturnInst::Create(Context, Add));
 
   // Output the bitcode file to stdout
-  WriteBitcodeToFile(M, outs());
+  M->dump();
 
   // Delete the module and all of its contents.
   delete M;
